@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-4_seq_similarity.py
+3_seq_similarity.py
 
 Estimate within-dataset sequence similarity from a SynPlexity-formatted CSV
 (two columns: header, seq_to_synth). Uses:
@@ -16,7 +16,7 @@ Outputs under output/similarity/:
   - *_hist_counts.csv     (binned counts for each histogram)
 
 Usage:
-  python scripts/4_seq_similarity.py -i seqs/<custom_seqs>.csv
+  python scripts/3_seq_similarity.py -i seqs/<custom_seqs>.csv
 """
 
 import argparse

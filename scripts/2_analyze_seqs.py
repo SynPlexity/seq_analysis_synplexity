@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-3_analyze_seqs.py
+2_analyze_seqs.py
 
 Adds per-sequence internal repeat metrics and logs output, including sequence count statistics:
 
@@ -27,7 +27,7 @@ Previous functionality (restriction-site counts, GC imbalance, homopolymers, etc
 remains unchanged.
 
 Usage:
-    python scripts/3_analyze_seqs.py <custom_seqs>.csv
+    python scripts/2_analyze_seqs.py <custom_seqs>.csv
 
 Dependencies: numpy, pandas, matplotlib
 """

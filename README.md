@@ -20,16 +20,13 @@ This pipeline processes and analyzes designed DNA libraries in four reproducible
    - Auto-generates headers if missing
    - Converts all sequences to uppercase DNA format
 
-2. **FASTA Export**  
-- Converts the formatted CSV into FASTA format for reference and downstream tools.
-
-3. **QC & Analysis**  
+2. **QC & Analysis**  
 - Computes core sequence quality metrics:
    - Detects illegal restriction sites (BspQI, BtsI-v2)
    - Measures length distribution, GC window imbalance, internal repeats, and homopolymer frequency
    - Produces summary `.csv` files and histograms
 
-4. **Similarity Analysis**
+3. **Similarity Analysis**
  - Quantifies library diversity using:
    - **Hamming % identity** (for equal-length sequences)
    - **k-mer Jaccard similarity** (for cross-length comparisons, when applicable)
@@ -76,46 +73,31 @@ python scripts/1_format_seqs_from_template.py \
 - *Creates an `output/` directory (if missing)*
 - *Writes a cleaned, standardized CSV to `output/<custom_seqs>.csv`*
 
-### 2. Export CSV as FASTA
-
-Convert the formatted CSV into FASTA format for downstream use:
-
-```bash
-python scripts/2_csv_to_fasta.py \
-    output/<custom_seqs>.csv
-
-# Example (using test_384_seqs.xlsx)-----------
-python scripts/2_csv_to_fasta.py \
-    output/test_384_seqs.csv
-```
-
-- *Creates a subdirectory within `output/fasta/<custom_seqs>.fasta`*
-
-### 3. Sequence QC & Feature Analysis
+### 2. Sequence QC & Feature Analysis
 
 Perform sequence-level QC, restriction-site detection, GC window imbalance analysis, repeat counting, and homopolymer profiling:
 
 ```bash
-python scripts/3_analyze_seqs.py \
+python scripts/2_analyze_seqs.py \
     output/<custom_seqs>.csv
 
 # Example (using test_384_seqs.xlsx)-----------
-python scripts/3_analyze_seqs.py \
+python scripts/2_analyze_seqs.py \
     output/test_384_seqs.csv
 ```
 
 - *All QC outputs are written to `output/`*
 
-### 4. Sequence Similarity Analysis
+### 3. Sequence Similarity Analysis
 
 Compute pairwise similarity using both Hamming % identity and k-mer Jaccard:
 
 ```bash
-python scripts/4_seq_similarity.py \
+python scripts/3_seq_similarity.py \
     -i output/<custom_seqs>.csv
 
 # Example (using test_384_seqs.xlsx)-----------
-python scripts/4_seq_similarity.py \
+python scripts/3_seq_similarity.py \
     -i output/test_384_seqs.csv
 ```
 
@@ -125,7 +107,7 @@ python scripts/4_seq_similarity.py \
 
 ## 📊 QC & Analysis Outputs
 
-Example output from **Step 3**:
+Example output from **Step 2**:
 
 ```bash
 output/
@@ -143,7 +125,7 @@ output/
 
 ## 📈 Similarity Analysis Outputs
 
-Example output from **Step 4**:
+Example output from **Step 3**:
 
 ```bash
 output/similarity/
