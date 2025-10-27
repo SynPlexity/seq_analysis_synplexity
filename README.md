@@ -9,21 +9,21 @@ A Python-based workflow for **QC**, **feature analysis**, and **diversity measur
 This pipeline processes and analyzes designed DNA libraries in four reproducible steps:
 
 1. **Input Formatting**  
-Cleans and standardizes SynPlexity’s Excel template (`.xlsx`) into a two-column CSV file.
+- Cleans and standardizes SynPlexity’s Excel template (`.xlsx`) into a two-column CSV file.
    - Auto-generates headers if missing
    - Converts all sequences to uppercase DNA format
 
 2. **FASTA Export**  
-Converts the formatted CSV into FASTA format for reference and downstream tools.
+- Converts the formatted CSV into FASTA format for reference and downstream tools.
 
 3. **QC & Analysis**  
-Computes core sequence quality metrics:
+- Computes core sequence quality metrics:
    - Detects illegal restriction sites (BspQI, BtsI-v2)
    - Measures length distribution, GC window imbalance, internal repeats, and homopolymer frequency
    - Produces summary `.csv` files and histograms
 
 4. **Similarity Analysis**
- Quantifies library diversity using:
+ - Quantifies library diversity using:
    - **Hamming % identity** (for equal-length sequences)
    - **k-mer Jaccard similarity** (for cross-length comparisons, when applicable)
    - Outputs summary statistics and histograms for visualizing redundancy
