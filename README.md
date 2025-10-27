@@ -58,10 +58,10 @@ pip install pandas numpy matplotlib
 
 ### 1. Format Sequences from Template
 
-Place your input Excel file in the `seqs/` directory and run:
-
 > [!NOTE]
-> Replace `<custom_seqs>` with a relevant file name for your project
+> **Replace `<custom_seqs>` with a relevant project name**
+
+Place your input Excel file in the `seqs/` directory and run:
 
 ```bash
 python scripts/1_format_seqs_from_template.py \
