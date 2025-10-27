@@ -57,7 +57,8 @@ pip install pandas numpy matplotlib
 ## ▶️ Quick Start
 
 > [!NOTE]
-> **Replace `<custom_seqs>.xlsx` with a relevant project name**
+> **Replace `<custom_seqs>.xlsx` with your project name** \
+> **Feel free to use `test_384_seqs.xlsx` as an example dataset for the complete workflow**
 
 ### 1. Format Sequences from Template
 
@@ -66,6 +67,10 @@ Place your input Excel file in the `seqs/` directory and run:
 ```bash
 python scripts/1_format_seqs_from_template.py \
     seqs/<custom_seqs>.xlsx
+
+# Example (using test_384_seqs.xlsx)-----------
+python scripts/1_format_seqs_from_template.py \
+    seqs/test_384_seqs.xlsx
 ```
 
 - *Creates an `output/` directory (if missing)*
@@ -78,6 +83,10 @@ Convert the formatted CSV into FASTA format for downstream use:
 ```bash
 python scripts/2_csv_to_fasta.py \
     output/<custom_seqs>.csv
+
+# Example (using test_384_seqs.xlsx)-----------
+python scripts/2_csv_to_fasta.py \
+    output/test_384_seqs.csv
 ```
 
 - *Creates a subdirectory within `output/fasta/<custom_seqs>.fasta`*
@@ -89,6 +98,10 @@ Perform sequence-level QC, restriction-site detection, GC window imbalance analy
 ```bash
 python scripts/3_analyze_seqs.py \
     output/<custom_seqs>.csv
+
+# Example (using test_384_seqs.xlsx)-----------
+python scripts/3_analyze_seqs.py \
+    output/test_384_seqs.csv
 ```
 
 - *All QC outputs are written to `output/`*
@@ -100,6 +113,10 @@ Compute pairwise similarity using both Hamming % identity and k-mer Jaccard:
 ```bash
 python scripts/4_seq_similarity.py \
     -i output/<custom_seqs>.csv
+
+# Example (using test_384_seqs.xlsx)-----------
+python scripts/4_seq_similarity.py \
+    -i output/test_384_seqs.csv
 ```
 
 - *Results are written to `output/similarity/`*
