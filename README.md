@@ -4,7 +4,7 @@ A Python-based workflow for **QC**, **feature analysis**, and **diversity measur
 
 > [!NOTE]
 > **Before starting:** \
-> **1. Download the SynPlexity_Order_Template.xlsx file.** \
+> **1. Download the `SynPlexity_Order_Template.xlsx` file.** \
 > **2. Paste your custom sequences into the Sequences tab.** \
 > **3. Save a copy of the completed template in the seqs/ directory after cloning this repository.** \
 > **4. Rename the file using a descriptive project name — this name (e.g., `my_project.xlsx`) will be used throughout the workflow in place of `<custom_seqs>.xlsx`.**
