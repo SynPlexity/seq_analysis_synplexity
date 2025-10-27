@@ -56,7 +56,7 @@ pip install pandas numpy matplotlib
 
 > [!NOTE]
 > **Before running the commands below:** \
-> - *Replace `<custom_seqs>.xlsx` with your project’s file name.* \
+> - *Replace `<custom_seqs>.xlsx` with your project’s file name.*
 > - *Use the included `test_384_seqs.xlsx` example dataset to test and verify the complete workflow.*
 
 ### 1. Format Sequences from Template
