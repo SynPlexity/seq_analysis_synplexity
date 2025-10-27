@@ -56,10 +56,10 @@ pip install pandas numpy matplotlib
 
 ## ▶️ Quick Start
 
-### 1. Format Sequences from Template
-
 > [!NOTE]
-> **Replace `<custom_seqs>` with a relevant project name**
+> **Replace `<custom_seqs>.xlsx` with a relevant project name**
+
+### 1. Format Sequences from Template
 
 Place your input Excel file in the `seqs/` directory and run:
 
@@ -68,11 +68,8 @@ python scripts/1_format_seqs_from_template.py \
     seqs/<custom_seqs>.xlsx
 ```
 
-- Creates an `output/` directory (if missing)
-- Writes a cleaned, standardized CSV:
-    ```bash
-    output/<custom_seqs>.csv
-    ```
+- *Creates an `output/` directory (if missing)*
+- *Writes a cleaned, standardized CSV to `output/<custom_seqs>.csv`*
 
 ### 2. Export CSV as FASTA
 
@@ -83,10 +80,7 @@ python scripts/2_csv_to_fasta.py \
     output/<custom_seqs>.csv
 ```
 
-- Creates a subdirectory:
-    ```bash
-    output/fasta/<custom_seqs>.fasta
-    ```
+- *Creates a subdirectory within `output/fasta/<custom_seqs>.fasta`*
 
 ### 3. Sequence QC & Feature Analysis
 
@@ -97,10 +91,7 @@ python scripts/3_analyze_seqs.py \
     output/<custom_seqs>.csv
 ```
 
-- All QC outputs are written to:
-    ```bash
-    output/
-    ```
+- *All QC outputs are written to `output/`*
 
 ### 4. Sequence Similarity Analysis
 
@@ -111,10 +102,7 @@ python scripts/4_seq_similarity.py \
     -i output/<custom_seqs>.csv
 ```
 
-- Results are written to:
-    ```bash
-    output/similarity/
-    ```
+- *Results are written to `output/similarity/`*
 
 ---
 
