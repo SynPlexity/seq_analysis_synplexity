@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-format_seqs_from_template.py
+1_format_seqs_from_template.py
 
 Reads SynPlexity's Excel order template (tab 2: "Sequences") and outputs:
   - seq_id        (from Excel)
   - seq_to_synth  (cleaned uppercase sequence)
 
 Usage:
-    python scripts/format_seqs_from_template.py <input_xlsx>
+    python scripts/1_format_seqs_from_template.py <custom_seqs>.xlsx
 
 Behavior:
 - Requires columns: 'seq_id' and 'sequence'

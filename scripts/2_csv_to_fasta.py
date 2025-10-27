@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-csv_to_fasta.py
+2_csv_to_fasta.py
 
 Convert a two-column CSV of sequences into FASTA format and save to a file in the "output/fasta" directory.
 
 Usage:
-    python csv_to_fasta.py <input_csv>
+    python scripts/2_csv_to_fasta.py <custom_seqs>.csv
 
 Assumes the input CSV has columns:
     seq_id, seq_to_synth
