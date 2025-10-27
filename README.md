@@ -72,7 +72,7 @@ Place your input Excel file in the `seqs/` directory and run:
 python scripts/1_format_seqs_from_template.py \
     seqs/<custom_seqs>.xlsx
 
-# Example (using test_384_seqs.xlsx)-----------
+# Example (using test_384_seqs.xlsx)
 python scripts/1_format_seqs_from_template.py \
     seqs/test_384_seqs.xlsx
 ```
@@ -88,7 +88,7 @@ Perform sequence-level QC, restriction-site detection, GC window imbalance analy
 python scripts/2_analyze_seqs.py \
     output/<custom_seqs>.csv
 
-# Example (using test_384_seqs.xlsx)-----------
+# Example (using test_384_seqs.xlsx)
 python scripts/2_analyze_seqs.py \
     output/test_384_seqs.csv
 ```
@@ -103,7 +103,7 @@ Compute pairwise similarity using both Hamming % identity and k-mer Jaccard:
 python scripts/3_seq_similarity.py \
     -i output/<custom_seqs>.csv
 
-# Example (using test_384_seqs.xlsx)-----------
+# Example (using test_384_seqs.xlsx)
 python scripts/3_seq_similarity.py \
     -i output/test_384_seqs.csv
 ```
