@@ -1,6 +1,6 @@
 # SynPlexity Sequence Analysis
 
-A Python-based workflow for **QC**, **feature analysis**, and **diversity measurement** of customer-provided DNA sequences.
+A Python-based workflow for **QC**, **feature analysis**, and **similarity measurement** of customer-provided DNA sequences. It standardizes **sequence formatting**, performs **quality control checks** (e.g., restriction site filtering, GC content, repeats, and homopolymers), and quantifies **sequence diversity** through pairwise similarity metrics — ***enabling users to assess both sequence integrity and design uniqueness before synthesis***.
 
 > [!NOTE]
 > **Before starting:** \
