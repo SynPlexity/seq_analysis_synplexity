@@ -13,7 +13,7 @@ A Python-based workflow for **QC**, **feature analysis**, and **diversity measur
 
 ## 🔍 Overview
 
-This pipeline processes and analyzes designed DNA libraries in four reproducible steps:
+This pipeline processes and analyzes designed DNA sequences in three reproducible steps:
 
 1. **Input Formatting**  
 - Cleans and standardizes SynPlexity’s Excel template (`.xlsx`) into a two-column CSV file.
@@ -27,7 +27,7 @@ This pipeline processes and analyzes designed DNA libraries in four reproducible
    - Produces summary `.csv` files and histograms
 
 3. **Similarity Analysis**
- - Quantifies library diversity using:
+ - Quantifies sequence diversity using:
    - **Hamming % identity** (for equal-length sequences)
    - **k-mer Jaccard similarity** (for cross-length comparisons, when applicable)
    - Outputs summary statistics and histograms for visualizing redundancy
@@ -55,7 +55,7 @@ pip install pandas numpy matplotlib
 
 > [!NOTE]
 > **Replace `<custom_seqs>.xlsx` with your project name** \
-> **Feel free to use `test_384_seqs.xlsx` as an example dataset for the complete workflow**
+> **Use `test_384_seqs.xlsx` as an example dataset for the complete workflow**
 
 ### 1. Format Sequences from Template
 
@@ -138,12 +138,12 @@ output/similarity/
 
 **Summary metrics include:**
 
-- **Mean/median similarity:** overall redundancy within the library
+- **Mean/median similarity:** overall redundancy within the sequence dataset
 - **p90 similarity:** top 10% of most-similar pairs (potential duplicates)
-- **Histograms:** visualize library diversity and clustering of related designs
+- **Histograms:** visualize sequence diversity and clustering of related designs
 
 > [!NOTE]
-> The `jaccard_hist.*` files are only generated if the library includes sequences of differing lengths.
+> The `jaccard_hist.*` files are only generated if the dataset includes sequences of differing lengths.
 
 ---
 
